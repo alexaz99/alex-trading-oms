@@ -6,6 +6,7 @@
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
 		<version>2.6.3</version>
+		<!--<version>2.1.1.RELEASE</version>-->
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>alex.trading.oms</groupId>
@@ -13,9 +14,12 @@
 	<version>0.0.1-SNAPSHOT</version>
 	<name>alex-trading-oms</name>
 	<description>Alex OMS Trading App</description>
+
 	<properties>
 		<java.version>11</java.version>
+		<some.custom.prop>foo bar</some.custom.prop>
 	</properties>
+
 	<dependencies>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
@@ -30,7 +34,6 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-devtools</artifactId>
 			<scope>runtime</scope>
-			<optional>true</optional>
 		</dependency>
 		<dependency>
 			<groupId>org.projectlombok</groupId>
@@ -57,8 +60,91 @@
 						</exclude>
 					</excludes>
 				</configuration>
+
+				<!-- This execution for plugin generates build-info.properties in target/classes/META-INF dir-->
+				<executions>
+					<execution>
+						<id>build-info-goal</id>
+						<goals>
+							<goal>build-info</goal>
+						</goals>
+						<configuration>
+							<additionalProperties>
+								<java.version>${java.version}</java.version>
+								<some.custom.prop>${some.custom.prop}</some.custom.prop>
+							</additionalProperties>
+						</configuration>
+					</execution>
+					<execution>
+						<id>pre-it</id>
+						<goals>
+							<goal>start</goal>
+						</goals>
+					</execution>
+					<execution>
+						<id>post-it</id>
+						<goals>
+							<goal>stop</goal>
+						</goals>
+					</execution>
+				</executions>
+
+			</plugin>
+
+			<!-- This plugin generates git.properties in target/classes dir-->
+			<plugin>
+				<groupId>pl.project13.maven</groupId>
+				<artifactId>git-commit-id-plugin</artifactId>
 			</plugin>
 		</plugins>
 	</build>
+
+
+	<!-- actuator/info with git info run with this config for SpringBoot 2.1.1.RELEASE with JUnit 4-->
+	<!-- actuator/info with git info run does not appear as public API with this config for SpringBoot 2.6.3 with JUnit 5 -->
+
+<!--	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-maven-plugin</artifactId>
+
+
+				<executions>
+					<execution>
+						<id>build-info-goal</id>
+						<goals>
+							<goal>build-info</goal>
+						</goals>
+						<configuration>
+							<additionalProperties>
+								<java.version>${java.version}</java.version>
+								<some.custom.prop>${some.custom.prop}</some.custom.prop>
+							</additionalProperties>
+						</configuration>
+					</execution>
+					<execution>
+						<id>pre-it</id>
+						<goals>
+							<goal>start</goal>
+						</goals>
+					</execution>
+					<execution>
+						<id>post-it</id>
+						<goals>
+							<goal>stop</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+
+			<plugin>
+				<groupId>pl.project13.maven</groupId>
+				<artifactId>git-commit-id-plugin</artifactId>
+			</plugin>
+
+
+		</plugins>
+	</build>-->
 
 </project>
