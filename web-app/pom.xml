@@ -17,6 +17,14 @@
     </properties>
 
     <dependencies>
+
+        <!-- web-model module that is packed as a simple jar-->
+        <dependency>
+            <groupId>alex.trading.oms</groupId>
+            <artifactId>web-model</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-actuator</artifactId>
