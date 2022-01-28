@@ -13,6 +13,7 @@
 
 	<groupId>alex.trading.oms</groupId>
 	<artifactId>alex-trading-oms</artifactId>
+	<!--<version>${revision}</version>-->
 	<version>0.0.1-SNAPSHOT</version>
 	<name>alex-trading-oms</name>
 	<description>Alex OMS Trading App</description>
@@ -27,6 +28,10 @@
 	<properties>
 		<java.version>11</java.version>
 		<some.custom.prop>foo bar</some.custom.prop>
+		<revision>1.0-SNAPSHOT</revision>
+		<jaxb.version>2.3.0</jaxb.version>
+		<mapstruct.version>1.2.0.Final</mapstruct.version>
+		<lombok.version>1.18.4</lombok.version>
 	</properties>
 
 	<build>
