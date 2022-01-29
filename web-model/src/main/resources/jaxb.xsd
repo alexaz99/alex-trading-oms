@@ -19,4 +19,20 @@
         </xsd:sequence>
     </xsd:complexType>
 
+    <xsd:complexType name="Product">
+        <xsd:sequence>
+            <xsd:element name="productId" type="xsd:integer"/>
+            <xsd:element name="productDescription" type="xsd:string"/>
+            <xsd:element name="productPrice" type="xsd:decimal"/>
+        </xsd:sequence>
+    </xsd:complexType>
+
+    <xsd:complexType name="CreateProductRequest">
+        <xsd:complexContent>
+            <xsd:extension base="Product">
+                <xsd:attribute name="apikey" type="xsd:string"/>
+            </xsd:extension>
+        </xsd:complexContent>
+    </xsd:complexType>
+
 </xsd:schema>

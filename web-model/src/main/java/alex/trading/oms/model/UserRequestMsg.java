@@ -1,7 +1,7 @@
 package alex.trading.oms.model;
 
 // Simple POJO class
-public class User {
+public class UserRequestMsg {
 
     private String firstName;
     private String lastName;

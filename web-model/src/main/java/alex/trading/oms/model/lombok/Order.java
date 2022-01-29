@@ -1,9 +1,10 @@
 package alex.trading.oms.model.lombok;
 
 
+import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
-
+import lombok.NoArgsConstructor;
 
 
 //@lombok.Getter
@@ -11,10 +12,11 @@ import lombok.Data;
 
 // to use RequiredArgsConstructor.
 // According to Documentation, Required arguments are final fields and fields with constraints such as @NonNull.
-@Data
+@AllArgsConstructor
+@NoArgsConstructor
 @Builder
-@lombok.NoArgsConstructor
-@lombok.AllArgsConstructor
+@Data
+//@Entity
 //@lombok.RequiredArgsConstructor
 @lombok.EqualsAndHashCode(of = {"ordId", "ticker", "isBuy"})
 public class Order {

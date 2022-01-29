@@ -27,6 +27,8 @@
 
 	<properties>
 		<java.version>11</java.version>
+		<maven.compiler.source>${java.version}</maven.compiler.source>
+		<maven.compiler.target>${java.version}</maven.compiler.target>
 		<some.custom.prop>foo bar</some.custom.prop>
 		<revision>1.0-SNAPSHOT</revision>
 		<jaxb.version>2.3.0</jaxb.version>

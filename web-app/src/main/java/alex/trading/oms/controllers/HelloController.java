@@ -1,6 +1,7 @@
 package alex.trading.oms.controllers;
 
-import alex.trading.oms.model.User;
+//import alex.trading.oms.model.User;
+import alex.trading.oms.model.UserRequestMsg;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -15,7 +16,7 @@ public class HelloController {
     public String hello() {
 
         // from web-model package
-        User user = new User();
+        UserRequestMsg user = new UserRequestMsg();
 
         logger.info("Call {} hello method", getClass().getSimpleName());
         return "Request Mapping check => Updated Greetings from Spring Alex Boot App!";
