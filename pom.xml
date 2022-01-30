@@ -29,10 +29,12 @@
 	<properties>
 		<revision>5.2-FINAL</revision>
 		<!--<revision>1.0-SNAPSHOT</revision>-->
+
 		<java.version>11</java.version>
 		<maven.compiler.source>${java.version}</maven.compiler.source>
 		<maven.compiler.target>${java.version}</maven.compiler.target>
 		<some.custom.prop>foo bar</some.custom.prop>
+
 		<jaxb.version>2.3.0</jaxb.version>
 		<mapstruct.version>1.2.0.Final</mapstruct.version>
 		<lombok.version>1.18.4</lombok.version>
