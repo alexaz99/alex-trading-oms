@@ -67,6 +67,10 @@
                 <groupId>org.jvnet.jaxb2.maven2</groupId>
                 <artifactId>maven-jaxb2-plugin</artifactId>
                 <version>0.14.0</version>
+                <configuration>
+                    <schemaDirectory>${basedir}/src/main/resources/xml-schema</schemaDirectory>
+                    <!--<bindingDirectory>${basedir}/src/main/resources/xml-schema</bindingDirectory>-->
+                </configuration>
                 <executions>
                     <execution>
                         <goals>
@@ -82,7 +86,7 @@
                 <artifactId>jsonschema2pojo-maven-plugin</artifactId>
                 <version>0.5.1</version>
                 <configuration>
-                    <sourceDirectory>${basedir}/src/main/resources/schema</sourceDirectory>
+                    <sourceDirectory>${basedir}/src/main/resources/json-schema</sourceDirectory>
                     <targetPackage>alex.trading.oms.model.json</targetPackage>
                     <useCommonsLang3>true</useCommonsLang3>
                 </configuration>
