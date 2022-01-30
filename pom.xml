@@ -13,8 +13,9 @@
 
 	<groupId>alex.trading.oms</groupId>
 	<artifactId>alex-trading-oms</artifactId>
-	<!--<version>${revision}</version>-->
-	<version>0.0.1-SNAPSHOT</version>
+	<version>${revision}</version>
+	<!--<version>0.0.1-SNAPSHOT</version>-->
+
 	<name>alex-trading-oms</name>
 	<description>Alex OMS Trading App</description>
 
@@ -26,7 +27,8 @@
 	</modules>
 
 	<properties>
-		<revision>1.0-SNAPSHOT</revision>
+		<revision>5.2-FINAL</revision>
+		<!--<revision>1.0-SNAPSHOT</revision>-->
 		<java.version>11</java.version>
 		<maven.compiler.source>${java.version}</maven.compiler.source>
 		<maven.compiler.target>${java.version}</maven.compiler.target>
