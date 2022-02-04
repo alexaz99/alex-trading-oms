@@ -30,6 +30,10 @@ public class HelloController {
         return true;
     }
 
+    public static void doAction() {
+
+    }
+
 
 
 }
