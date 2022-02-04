@@ -22,6 +22,10 @@ public class HelloController {
         return "Request Mapping check => Updated Greetings from Spring Alex Boot App!";
     }
 
+    public static boolean isValid() {
+        return true;
+    }
+
 
 
 }
