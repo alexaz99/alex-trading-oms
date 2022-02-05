@@ -31,7 +31,6 @@ public class GetTheStock implements Runnable {
 
     @Override
     public void run() {
-
         DecimalFormat df = new DecimalFormat("#.##");
 
         for (int i = 1; i <= 20; i++) {
@@ -62,12 +61,9 @@ public class GetTheStock implements Runnable {
             if (stock.equalsIgnoreCase("GOOG")) {
                 ((StockGrabber)stockGrabber).seIBMPrice(price);
             }
-
-            System.out.println(stock + ": " + (df.format(price)) +
-                    " " + df.format(randNum));
+            System.out.println(stock + ": " + (df.format(price)) + " " + df.format(randNum));
             System.out.println();
         }
-
     }
 
     public static void main(String[] args) {
