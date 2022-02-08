@@ -1,0 +1,16 @@
+{
+    "namespace": "alex.trading.oms.model.avro",
+	"type": "record",
+	"name": "ClientIdentifier",
+	"version": "1",
+	"fields":[
+	    {
+	       "name": "hostName",
+	       "type": "string"
+	    },
+	    {
+	       "name": "ipAddress",
+	       "type": "string"
+	    }
+	]
+}

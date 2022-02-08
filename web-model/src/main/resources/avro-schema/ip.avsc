@@ -1,0 +1,9 @@
+{
+    "namespace": "alex.trading.oms.model.avro",
+    "type": "record",
+    "name": "Ip",
+    "fields": [
+        {"name": "host", "type": "string"},
+        {"name": "address",  "type": ["string", "null"]}
+    ]
+}

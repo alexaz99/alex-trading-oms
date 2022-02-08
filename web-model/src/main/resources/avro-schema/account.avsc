@@ -1,0 +1,10 @@
+{
+    "namespace": "alex.trading.oms.model.avro",
+	"type": "record",
+	"name": "Account",
+	"version": "1",
+	"fields":[
+	    { "name": "accountId", "type": "string"},
+	    { "name": "accountCd", "type": "string", "default": "DefaultValue"}
+	]
+}
