@@ -139,9 +139,8 @@
                         </goals>
                         <configuration>
                             <sourceDirectory>${basedir}/src/main/resources/avro-schema</sourceDirectory>
-                            <outputDirectory>${basedir}/src/main/java/</outputDirectory>
-                           <!-- <sourceDirectory>${project.basedir}/src/main/avro/</sourceDirectory>
-                            <outputDirectory>${project.basedir}/src/main/java/</outputDirectory>-->
+                            <!-- Can output generated java classes. If omit, just create compiled classes-->
+                            <!--<outputDirectory>${basedir}/src/main/java/</outputDirectory>-->
                         </configuration>
                     </execution>
                 </executions>
