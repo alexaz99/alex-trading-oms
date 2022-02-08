@@ -30,7 +30,7 @@ public class StockObserver implements IObserver {
     public StockObserver(ISubject stockGrabber) {
         this.stockGrabber = stockGrabber;
         this.observerID = ++observerIDTracker;
-        System.out.println("New Observer " + this.observerID + " has been created.");
+        System.out.println("New Observer #" + this.observerID + " has been created.");
 
         // ! Important wiring back with the object from
         // which we want to reveive some updates.
@@ -46,7 +46,7 @@ public class StockObserver implements IObserver {
     }
 
     public void printThePrices() {
-        System.out.println(observerID + "\nIBM: " + ibmPrice +
+        System.out.println("observerID: " + observerID + "\nIBM: " + ibmPrice +
                 "\nAAPL: " + aaplPrice + "\nGOOG: " + googPrice + "\n");
     }
 }

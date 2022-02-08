@@ -43,7 +43,7 @@ public class GetTheStock implements Runnable {
 
             // now create a random number between a negative 3 cents and positive 3 cents
             double randNum = (Math.random() * .06) - .03;
-            System.out.println("Stock: " + stock + ", randNum: " + randNum + ", RoundRandNum: " + df.format(randNum));
+            System.out.println("[Thread: " + Thread.currentThread().getName() + "] Stock: " + stock + ", randNum: " + randNum + ", RoundRandNum: " + df.format(randNum));
 
             // df.format(price + randNum) add original price with ranNum, convert to 2 decimal string
             // and convert back to double
@@ -61,7 +61,7 @@ public class GetTheStock implements Runnable {
             if (stock.equalsIgnoreCase("GOOG")) {
                 ((StockGrabber)stockGrabber).seIBMPrice(price);
             }
-            System.out.println(stock + ": " + (df.format(price)) + " " + df.format(randNum));
+            System.out.println("[Thread: " + Thread.currentThread().getName() + "] " + stock + ": " + (df.format(price)) + " " + df.format(randNum));
             System.out.println();
         }
     }

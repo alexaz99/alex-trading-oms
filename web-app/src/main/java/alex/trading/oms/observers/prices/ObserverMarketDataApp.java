@@ -46,8 +46,14 @@ public class ObserverMarketDataApp {
         stockGrabber.seAAPLPrice(676.10);
         stockGrabber.setGoogPrice(2014.45);
 
+        System.out.println("---------------------------------------------------------");
+        System.out.println("--- Starting 3 Random Price Generators for Each Stock ---");
+        System.out.println("---------------------------------------------------------");
+
         //--------------------------------------------
+        // Instead of just call method above stockGrabber.seIBMPrice, stockGrabber.seAAPLPrice
         //- Create 3 GetTheStock - random stock price generator
+        // Acts like a stock price upstream that generate random prices for each stock
         Runnable getIBM = new GetTheStock(stockGrabber, 2000, "IBM", 127.00);
         Runnable getAAPL = new GetTheStock(stockGrabber, 1000, "AAPL", 150.00);
         Runnable getGOOG = new GetTheStock(stockGrabber, 3000, "GOOG", 2772.00);
