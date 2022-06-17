@@ -7,7 +7,7 @@ import org.junit.jupiter.api.TestInstance;
 
 @TestInstance(TestInstance.Lifecycle.PER_METHOD)
 @Tag("model")
-public interface ModelTest {
+public interface IModelTest {
     /**
      * Uses interface to output test information (name and iteration
      */
