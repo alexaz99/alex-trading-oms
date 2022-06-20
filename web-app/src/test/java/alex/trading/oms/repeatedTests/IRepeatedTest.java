@@ -8,8 +8,8 @@ import org.junit.jupiter.api.TestInstance;
  * So in this case the @Tag is no longer defined in each Test Controller Class,
  * but in the one Group Controller interface.
  */
-//@TestInstance(TestInstance.Lifecycle.PER_CLASS)
-@TestInstance(TestInstance.Lifecycle.PER_METHOD)
+@TestInstance(TestInstance.Lifecycle.PER_CLASS)
+//@TestInstance(TestInstance.Lifecycle.PER_METHOD)
 @Tag("repeatedTests")
 public interface IRepeatedTest {
 
