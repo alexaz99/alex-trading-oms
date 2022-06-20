@@ -55,7 +55,8 @@ public class StockGrabber implements ISubject {
         // Streams process all elements of a source, hence,
         // if there are no elements, no action will be taken.
         // Therefore, you don’t need to check whether the list is empty.
-        observers.stream().forEach(o -> o.update(ibmPrice, aaplPrice, googPrice));
+        observers.stream()
+                .forEach(o -> o.update(ibmPrice, aaplPrice, googPrice));
     }
 
     //-----------------------------------------------------------------------------
