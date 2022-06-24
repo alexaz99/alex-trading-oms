@@ -31,6 +31,7 @@
         </dependency>
 
         <!-- jaxb to generate java pojo classes for in/ot xml data -->
+        <!-- Better to move all versions to parent pom.xml under <dependencyManagement> -->
         <dependency>
             <groupId>javax.xml.bind</groupId>
             <artifactId>jaxb-api</artifactId>
