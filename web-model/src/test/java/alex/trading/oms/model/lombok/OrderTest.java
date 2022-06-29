@@ -4,6 +4,14 @@ package alex.trading.oms.model.lombok;
 
 class OrderTest {
 
+    public void testHello() {
+        System.out.println("Test - Hello");
+    }
+
+    public void testWorld() {
+        System.out.println("Test - World!!!");
+    }
+
 /*    @org.junit.jupiter.api.Test
     void canEqual() {
     }

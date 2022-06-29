@@ -27,8 +27,8 @@
 	</modules>
 
 	<properties>
-		<revision>5.2-FINAL</revision>
-		<!--<revision>1.0-SNAPSHOT</revision>-->
+		<!--<revision>5.2-FINAL</revision>-->
+		<revision>1.0-SNAPSHOT</revision>
 
 		<java.version>11</java.version>
 		<maven.compiler.source>${java.version}</maven.compiler.source>
