@@ -2,6 +2,7 @@ package alex.trading.oms.observers.prices;
 
 import alex.trading.oms.observers.IObserver;
 import alex.trading.oms.observers.ISubject;
+import org.springframework.lang.NonNull;
 
 import java.util.ArrayList;
 import java.util.Objects;
@@ -16,18 +17,23 @@ import java.util.Objects;
  */
 public class StockGrabber implements ISubject {
 
-    private ArrayList<IObserver> observers;
     private double ibmPrice;
     private double aaplPrice;
     private double googPrice;
+
+    /** List of registered Observers */
+    private ArrayList<IObserver> observers;
 
     public StockGrabber() {
         observers = new ArrayList<>();
     }
 
+    /**
+     * Can use Objects.requireNonNull(newObserver) or @NonNull
+     * @param newObserver
+     */
     @Override
-    public void register(IObserver newObserver) {
-        Objects.requireNonNull(newObserver);
+    public void register(@NonNull IObserver newObserver) {
         observers.add(newObserver);
     }
 
