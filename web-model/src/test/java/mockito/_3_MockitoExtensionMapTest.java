@@ -15,6 +15,11 @@ import static org.mockito.Mockito.*;
 /**
  * This MockitoExtension extension class does the same job as
  * @BeforeEach void setUp() method in AnnotationMapTest class
+ *
+ * Only one object can be under the test and we assert againt it.
+ * This is a mock object. All others object helps us to run the test.
+ * They are stubs. This is the basic idea!
+ * Everything is fake unless you use it as the Mock.
  */
 @ExtendWith(MockitoExtension.class)
 public class _3_MockitoExtensionMapTest {
@@ -44,8 +49,17 @@ public class _3_MockitoExtensionMapTest {
 
     @Test
     void shouldCallListOnce() {
+        // 1. verify that we call add method on the Mock object only once.
         mockList.add(new Random().nextLong());
-
         verify(mockList).add(anyLong());
+
+        // a simple test to return some value from a List and assert that it's correct one.
+        when(mockList.get(anyInt())).thenReturn(5L);
+
+        long val = mockList.get(1);
+        assertEquals(val, 5);
+
+        verify(mockList).get(anyInt());
+
     }
 }
